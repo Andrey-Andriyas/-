@@ -15,7 +15,7 @@ driver_1.get("http://uitestingplayground.com/classattr")
 for x in range(0, 3):
     sleep(3)
     blue_button = driver_1.find_element(By.CSS_SELECTOR, "button.btn-primary.btn-test")
-    blue_button.send_keys(Keys.RETURN)
+    blue_button.click()
 
 
 # Mozilla FireFox
@@ -25,6 +25,6 @@ for x in range(0, 3):
 # for x in range(0, 3):
 #     sleep(3)
 #     blue_button = driver_2.find_element(By.CSS_SELECTOR, "button.btn-primary.btn-test")
-#     blue_button.send_keys(Keys.RETURN)
+#     blue_button.click()
 
 sleep(5)

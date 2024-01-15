@@ -14,7 +14,7 @@ driver_1.maximize_window()
 driver_1.get("http://the-internet.herokuapp.com/add_remove_elements/")
 for x in range(0, 5):
     push_element = driver_1.find_element(By.CSS_SELECTOR, "button")
-    push_element.send_keys(Keys.RETURN)
+    push_element.click()
 button_delete = driver_1.find_elements(By.CSS_SELECTOR, "button.added-manually")
 print(len(button_delete))
 
@@ -25,7 +25,7 @@ print(len(button_delete))
 
 # for x in range(0, 5):
 #     push_element = driver_2.find_element(By.CSS_SELECTOR, "button")
-#     push_element.send_keys(Keys.RETURN)
+#     push_element.click()
 # button_delete = driver_2.find_elements(By.CSS_SELECTOR, "button.added-manually")
 # print(len(button_delete))
 

@@ -13,7 +13,7 @@ driver_1.maximize_window()
 driver_1.get("http://uitestingplayground.com/dynamicid")
 for x in range(0, 3):
     blue_button = driver_1.find_element(By.CSS_SELECTOR, "button.btn.btn-primary")
-    blue_button.send_keys(Keys.RETURN)
+    blue_button.click()
 
 
 #Mozilla FireFox
@@ -22,6 +22,6 @@ for x in range(0, 3):
 # driver_2.get("http://uitestingplayground.com/dynamicid")
 # for x in range(0, 3):
 #     blue_button = driver_2.find_element(By.CSS_SELECTOR, "button.btn.btn-primary")
-#     blue_button.send_keys(Keys.RETURN)
+#     blue_button.click()
 
 sleep(5)
