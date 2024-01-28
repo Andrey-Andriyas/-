@@ -1,6 +1,3 @@
-import time
-import pytest
-from time import sleep
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
@@ -21,11 +18,11 @@ def test_slow_calculator():
     button_plus = driver.find_element(By.CSS_SELECTOR, ".operator.btn.btn-outline-success").click()
     button_8 = driver.find_element(By.CSS_SELECTOR, ".btn.btn-outline-primary:nth-of-type(2)").click()
     button_equal = driver.find_element(By.CSS_SELECTOR, ".btn.btn-outline-warning").click()
-    time.sleep(45)
-
-    result = WebDriverWait(driver, 10).until(
-        EC.visibility_of_element_located((By.CSS_SELECTOR, ".screen"))
+    
+    waiter = WebDriverWait(driver, 46, 0.01).until(
+        EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".screen"), "15")
         )
-    assert result.text == "15"
+    
+    assert driver.find_element(By.CSS_SELECTOR, '.screen').text == "15"
 
     driver.quit()
